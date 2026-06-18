@@ -1,6 +1,6 @@
 # Configuração de build para deploy automático no Netlify (a cada push)
 [build]
-  command = "pnpm run build:wasm && pnpm run build"
+  command = "curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh && pnpm run build:wasm && pnpm run build"
   publish = "dist"
 
 [build.environment]
